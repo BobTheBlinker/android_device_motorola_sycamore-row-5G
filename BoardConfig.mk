@@ -42,6 +42,12 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(SYC_VB_MODULES)/*.ko)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(SYC_VB_MODULES)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(SYC_VB_MODULES)/modules.load.recovery))
 
+# Vendor kernel modules (stock vendor_dlkm, installed unstripped)
+SYC_DLKM_MODULES := $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm
+BOARD_DO_NOT_STRIP_VENDOR_MODULES := true
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(SYC_DLKM_MODULES)/*.ko)
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(SYC_DLKM_MODULES)/modules.load))
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt8755
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
@@ -52,8 +58,6 @@ TARGET_SCREEN_DENSITY := 320
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-# Bring-up: stock vendor-side images (BP2A.250605.031.A3 / 9bdeac_017)
+# Bring-up: stock vendor image (BP2A.250605.031.A3 / 9bdeac_017)
 SYC_STOCK_IMAGES ?= /fast/sycamore/stock/partitions
 BOARD_PREBUILT_VENDORIMAGE := $(SYC_STOCK_IMAGES)/vendor_a.img
-BOARD_PREBUILT_VENDOR_DLKMIMAGE := $(SYC_STOCK_IMAGES)/vendor_dlkm_a.img
-BOARD_PREBUILT_ODM_DLKMIMAGE := $(SYC_STOCK_IMAGES)/odm_dlkm_a.img
