@@ -1,7 +1,19 @@
 # Inherit from the 64-bit product configuration (with 32-bit support for the stock vendor).
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+TARGET_REQUIRES_HIDL_CAS_HAL := false
+
+# full_base_telephony.mk without telephony_vendor.mk: the stock vendor
+# runs its own RIL daemon (mtkfusionrild) instead of rild.
+PRODUCT_VENDOR_PROPERTIES := \
+    keyguard.no_require_sim?=true \
+    ro.com.android.dataroaming?=true
+PRODUCT_COPY_FILES := \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 
 # Inherit from sycamore_row_5G device.
 $(call inherit-product, device/motorola/sycamore_row_5G/device.mk)
