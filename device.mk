@@ -50,3 +50,10 @@ endif
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/sycamore_row_5G/sycamore_row_5G-vendor.mk)
+
+# Boot debug logger, only with SYCAMORE_BOOT_DEBUG=true in the build env
+ifeq ($(SYCAMORE_BOOT_DEBUG),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/debug/bootlog/init.sycamore-bootlog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sycamore-bootlog.rc \
+    $(LOCAL_PATH)/debug/bootlog/sycamore-bootlog.sh:$(TARGET_COPY_OUT_VENDOR)/bin/sycamore-bootlog.sh
+endif

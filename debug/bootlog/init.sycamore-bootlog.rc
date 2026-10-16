@@ -1,0 +1,9 @@
+# Boot debug logger (SYCAMORE_BOOT_DEBUG builds only, needs permissive SELinux)
+service vendor.sycamore-bootlog /vendor/bin/sh /vendor/bin/sycamore-bootlog.sh
+    user root
+    group root log readproc
+    disabled
+    oneshot
+
+on early-init
+    start vendor.sycamore-bootlog
