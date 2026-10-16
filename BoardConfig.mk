@@ -28,6 +28,7 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Bring-up: SELinux permissive
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Dynamic partitions: Lenovo layout uses group "main" (main_a / main_b)
 BOARD_SUPER_PARTITION_GROUPS := main
@@ -50,3 +51,9 @@ TARGET_SCREEN_DENSITY := 320
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Bring-up: stock vendor-side images (BP2A.250605.031.A3 / 9bdeac_017)
+SYC_STOCK_IMAGES ?= /fast/sycamore/stock/partitions
+BOARD_PREBUILT_VENDORIMAGE := $(SYC_STOCK_IMAGES)/vendor_a.img
+BOARD_PREBUILT_VENDOR_DLKMIMAGE := $(SYC_STOCK_IMAGES)/vendor_dlkm_a.img
+BOARD_PREBUILT_ODM_DLKMIMAGE := $(SYC_STOCK_IMAGES)/odm_dlkm_a.img

@@ -1,5 +1,5 @@
-# Inherit from the 64-bit product configuration.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+# Inherit from the 64-bit product configuration (with 32-bit support for the stock vendor).
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
