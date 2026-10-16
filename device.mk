@@ -46,6 +46,8 @@ PRODUCT_COPY_FILES += \
 # Development-only adb key, set in the buildBox build environment
 ifneq ($(SYCAMORE_DEV_ADB_KEY),)
 PRODUCT_ADB_KEYS := $(SYCAMORE_DEV_ADB_KEY)
+# and turn adb on from first boot (ro.debuggable is 0 on LineageOS userdebug)
+PRODUCT_SYSTEM_PROPERTIES += persist.sys.usb.config=adb
 endif
 
 # Inherit the proprietary files
