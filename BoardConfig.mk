@@ -58,6 +58,9 @@ TARGET_SCREEN_DENSITY := 320
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-# Bring-up: stock vendor image (BP2A.250605.031.A3 / 9bdeac_017)
-SYC_STOCK_IMAGES ?= /fast/sycamore/stock/partitions
-BOARD_PREBUILT_VENDORIMAGE := $(SYC_STOCK_IMAGES)/vendor_a.img
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
+
+# Inherit the proprietary files
+include vendor/motorola/sycamore_row_5G/BoardConfigVendor.mk

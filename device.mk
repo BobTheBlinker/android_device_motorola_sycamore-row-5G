@@ -47,3 +47,6 @@ PRODUCT_COPY_FILES += \
 ifneq ($(SYCAMORE_DEV_ADB_KEY),)
 PRODUCT_ADB_KEYS := $(SYCAMORE_DEV_ADB_KEY)
 endif
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/motorola/sycamore_row_5G/sycamore_row_5G-vendor.mk)
