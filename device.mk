@@ -24,3 +24,8 @@ PRODUCT_COPY_FILES += \
 # Recovery: USB controller for adb (ro.hardware is mt8755)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.mt8755.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt8755.rc
+
+# Development-only adb key, set in the buildBox build environment
+ifneq ($(SYCAMORE_DEV_ADB_KEY),)
+PRODUCT_ADB_KEYS := $(SYCAMORE_DEV_ADB_KEY)
+endif
