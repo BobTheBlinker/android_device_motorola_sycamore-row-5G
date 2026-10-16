@@ -5,10 +5,10 @@ TARGET_REQUIRES_HIDL_CAS_HAL := false
 
 # full_base_telephony.mk without telephony_vendor.mk: the stock vendor
 # runs its own RIL daemon (mtkfusionrild) instead of rild.
-PRODUCT_VENDOR_PROPERTIES := \
+PRODUCT_VENDOR_PROPERTIES += \
     keyguard.no_require_sim?=true \
     ro.com.android.dataroaming?=true
-PRODUCT_COPY_FILES := \
+PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system.mk)
