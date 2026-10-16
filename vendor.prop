@@ -579,6 +579,3 @@ ro.vendor.mtk.c2.vdec.fmt.support.level=2
 ro.netflix.bsp_rev=MTK6835-36999-1
 ro.vendor.storage.dynamicdata=enable
 ro.vendor.mgk_name=mgk_64_entry_level_k515
-
-# VNDK (stock vendor is API 33; libs come from com.android.vndk.v33)
-ro.vndk.version=33

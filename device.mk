@@ -8,9 +8,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Shipping API level (stock ro.product.first_api_level)
 PRODUCT_SHIPPING_API_LEVEL := 35
 
-# VNDK snapshot for the stock API 33 vendor
-PRODUCT_EXTRA_VNDK_VERSIONS := 33
-
 # Tablet
 PRODUCT_CHARACTERISTICS := tablet
 

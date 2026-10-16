@@ -9,7 +9,6 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
-    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -23,20 +22,6 @@ from os import path
 namespace_imports = [
     'vendor/motorola/mt6835-common',
 ]
-
-
-def vndk_v33_libs():
-    # Provided at runtime by the com.android.vndk.v33 APEX
-    configs = path.join(
-        path.dirname(path.realpath(__file__)),
-        '../../../prebuilts/vndk/v33/arm64/configs',
-    )
-    libs = set()
-    for name in ('vndkcore.libraries.33.txt', 'vndksp.libraries.txt'):
-        with open(path.join(configs, name)) as f:
-            libs.update(line.strip().removesuffix('.so') for line in f)
-    libs.discard('')
-    return libs
 
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
@@ -64,20 +49,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.mediatek.hardware.mtkpower@1.2',
     ): lib_fixup_hardware_mediatek,
 }
-
-lib_fixups_covered = {
-    lib
-    for key in lib_fixups
-    for lib in (key if isinstance(key, tuple) else (key,))
-}
-
-lib_fixups.update(
-    {
-        lib: lib_fixup_remove
-        for lib in vndk_v33_libs()
-        if lib not in lib_fixups_covered
-    }
-)
 
 # Stock copies of libs that AOSP also builds for vendor, kept as -v33
 v33_libs = (
