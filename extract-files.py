@@ -113,6 +113,10 @@ def blob_fixup_v33():
 
 
 blob_fixups: blob_fixups_user_type = {
+    # Uses libbase symbols that are gone in A16
+    'vendor/bin/hw/vendor.lenovo.hardware.battery-service': (
+        blob_fixup().replace_needed('libbase.so', 'libbase-v33.so')
+    ),
     (
         'vendor/bin/hw/vendor.lenovo.hardware.factory-service',
     ): blob_fixup_v33(),
