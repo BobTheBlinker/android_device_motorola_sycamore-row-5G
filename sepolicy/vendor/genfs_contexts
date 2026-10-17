@@ -1,0 +1,2 @@
+# Type-C port behind /sys/class/typec (written by the MTK USB HAL)
+genfscon sysfs /devices/platform/rt-pd-manager/typec    u:object_r:sysfs_usb_nonplat:s0
