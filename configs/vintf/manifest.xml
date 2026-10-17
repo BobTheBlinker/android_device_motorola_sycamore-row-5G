@@ -31,7 +31,7 @@
     </hal>
     <hal format="aidl">
         <name>android.hardware.bluetooth.audio</name>
-        <version>2</version>
+        <version>5</version>
         <interface>
             <name>IBluetoothAudioProviderFactory</name>
             <instance>default</instance>
