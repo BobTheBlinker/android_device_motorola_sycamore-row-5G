@@ -1,0 +1,7 @@
+# FRP HAL
+persist.vendor.battery.nuovo_flag.enabled    u:object_r:vendor_hal_battery_prop:s0
+
+# Set by nvram_lenovo (serials, MACs, IMEIs); vendor-only, unlike stock
+ro.odm.lenovo.              u:object_r:vendor_lenovotb_init_prop:s0
+persist.vendor.gsm.imei1    u:object_r:vendor_lenovotb_init_prop:s0
+persist.vendor.gsm.imei2    u:object_r:vendor_lenovotb_init_prop:s0

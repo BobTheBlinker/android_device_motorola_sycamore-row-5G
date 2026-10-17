@@ -1,0 +1,5 @@
+# FRP HAL
+/vendor/bin/hw/vendor\.lenovo\.hardware\.frp-service    u:object_r:frp_exec:s0
+
+# NVRAM identity
+/vendor/bin/nvram_lenovo    u:object_r:nvram_lenovo_exec:s0

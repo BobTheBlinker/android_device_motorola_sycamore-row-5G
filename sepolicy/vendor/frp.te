@@ -1,0 +1,16 @@
+# vendor.lenovo.hardware.frp-service (domain name as on stock)
+hal_attribute(frp)
+
+type hal_frp_service, hal_service_type, service_manager_type;
+hal_attribute_service(hal_frp, hal_frp_service)
+binder_use(hal_frp_server)
+
+type frp, domain, mlstrustedsubject;
+hal_server_domain(frp, hal_frp)
+
+type frp_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(frp)
+
+vndbinder_use(frp)
+
+set_prop(frp, vendor_hal_battery_prop)
