@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Data-centric: this build has no IMS, so a voice-centric UE drops LTE -->
+    <integer name="config_default_cellular_usage_setting">2</integer>
     <integer name="config_num_physical_slots">2</integer>
     <integer name="config_screenBrightnessDoze">5</integer>
     <integer name="config_shortPressOnPowerBehavior">1</integer>

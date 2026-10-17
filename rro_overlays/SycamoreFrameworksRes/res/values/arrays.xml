@@ -3,4 +3,8 @@
     <string-array name="config_biometric_sensors">
         <item>0:2:15</item>
     </string-array>
+    <integer-array name="config_supported_cellular_usage_settings">
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
 </resources>
