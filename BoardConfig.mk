@@ -30,6 +30,9 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_BOOTCONFIG += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
+# SEPolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
 # Dynamic partitions: Lenovo layout uses group "main" (main_a / main_b)
 BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 11809062912
