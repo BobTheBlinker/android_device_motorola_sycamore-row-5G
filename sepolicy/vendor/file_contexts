@@ -16,3 +16,6 @@
 
 # Keyboard
 /dev/ttyS1    u:object_r:lenovo_keyboard_device:s0
+
+# Lenovo customization partition
+/dev/block/by-name/lenovocust    u:object_r:lenovocust_block_device:s0
