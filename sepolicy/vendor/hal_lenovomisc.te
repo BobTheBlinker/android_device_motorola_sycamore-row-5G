@@ -1,0 +1,11 @@
+hal_attribute(lenovomisc)
+
+type hal_lenovomisc_service, hal_service_type, service_manager_type;
+hal_attribute_service(hal_lenovomisc, hal_lenovomisc_service)
+binder_use(hal_lenovomisc_server)
+
+type hal_lenovomisc_default, domain;
+hal_server_domain(hal_lenovomisc_default, hal_lenovomisc)
+
+type hal_lenovomisc_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_lenovomisc_default)

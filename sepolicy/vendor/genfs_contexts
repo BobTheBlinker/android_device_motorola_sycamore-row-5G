@@ -1,2 +1,14 @@
 # Type-C port behind /sys/class/typec (written by the MTK USB HAL)
 genfscon sysfs /devices/platform/rt-pd-manager/typec    u:object_r:sysfs_usb_nonplat:s0
+
+# Touchscreen
+genfscon proc /Pen_ID             u:object_r:proc_pen_id:s0
+genfscon proc /edge_grid_zone     u:object_r:proc_edge_zone:s0
+genfscon proc /game_mode          u:object_r:proc_game_mode:s0
+genfscon proc /gesture_control    u:object_r:proc_touch_wake:s0
+genfscon proc /panel_direction    u:object_r:proc_panel_dire:s0
+genfscon proc /support_pen        u:object_r:proc_support_pen:s0
+
+# Keyboard
+genfscon sysfs /devices/platform/soc/soc:lenovo_kb    u:object_r:sysfs_kb:s0
+genfscon sysfs /devices/platform/soc/soc:lenovo_kb/wakeup    u:object_r:sysfs_wakeup:s0

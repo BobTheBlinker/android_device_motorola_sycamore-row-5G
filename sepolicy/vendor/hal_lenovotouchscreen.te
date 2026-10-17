@@ -1,0 +1,21 @@
+hal_attribute(lenovotouchscreen)
+
+type hal_lenovotouchscreen_service, hal_service_type, service_manager_type;
+hal_attribute_service(hal_lenovotouchscreen, hal_lenovotouchscreen_service)
+binder_use(hal_lenovotouchscreen_server)
+
+type hal_lenovotouchscreen_default, domain;
+hal_server_domain(hal_lenovotouchscreen_default, hal_lenovotouchscreen)
+
+type hal_lenovotouchscreen_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_lenovotouchscreen_default)
+
+allow hal_lenovotouchscreen_default {
+    proc_edge_zone
+    proc_game_mode
+    proc_panel_dire
+    proc_pen_id
+    proc_support_pen
+    proc_touch_wake
+}:file rw_file_perms;
+allow hal_lenovotouchscreen_default sysfs:file rw_file_perms;

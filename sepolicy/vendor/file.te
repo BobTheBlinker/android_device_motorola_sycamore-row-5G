@@ -1,0 +1,8 @@
+type proc_edge_zone, fs_type, proc_type;
+type proc_game_mode, fs_type, proc_type;
+type proc_panel_dire, fs_type, proc_type;
+type proc_pen_id, fs_type, proc_type;
+type proc_support_pen, fs_type, proc_type;
+type proc_touch_wake, fs_type, proc_type;
+
+type sysfs_kb, fs_type, sysfs_type;
