@@ -582,3 +582,10 @@ ro.vendor.mgk_name=mgk_64_entry_level_k515
 
 # VNDK (stock vendor is API 33; libs come from com.android.vndk.v33)
 ro.vndk.version=33
+
+# Dalvik heap (stock values; ART falls back to a 16 MB heap without them)
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
