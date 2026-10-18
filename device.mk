@@ -60,19 +60,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.mt8755.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt8755.rc
 
-# Development-only adb key, set in the buildBox build environment
-ifneq ($(SYCAMORE_DEV_ADB_KEY),)
-PRODUCT_ADB_KEYS := $(SYCAMORE_DEV_ADB_KEY)
-# and turn adb on from first boot (ro.debuggable is 0 on LineageOS userdebug)
-PRODUCT_SYSTEM_PROPERTIES += persist.sys.usb.config=adb
-endif
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/sycamore_row_5G/sycamore_row_5G-vendor.mk)
-
-# Boot debug logger, only with SYCAMORE_BOOT_DEBUG=true in the build env
-ifeq ($(SYCAMORE_BOOT_DEBUG),true)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/debug/bootlog/init.sycamore-bootlog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sycamore-bootlog.rc \
-    $(LOCAL_PATH)/debug/bootlog/sycamore-bootlog.sh:$(TARGET_COPY_OUT_VENDOR)/bin/sycamore-bootlog.sh
-endif
