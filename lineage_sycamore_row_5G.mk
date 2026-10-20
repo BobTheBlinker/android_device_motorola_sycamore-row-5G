@@ -19,6 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 # Inherit from sycamore_row_5G device.
 $(call inherit-product, device/motorola/sycamore_row_5G/device.mk)
 
+# EXPERIMENTAL until keyboard and pen support is tested
+LINEAGE_BUILDTYPE ?= EXPERIMENTAL
+
 # Inherit Lineage configuration.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
