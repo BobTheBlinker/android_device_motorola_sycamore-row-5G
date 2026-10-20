@@ -22,6 +22,11 @@ $(call inherit-product, device/motorola/sycamore_row_5G/device.mk)
 # Inherit Lineage configuration.
 $(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
 
+# MindTheGapps, opt-in
+ifeq ($(WITH_GMS),true)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif
+
 PRODUCT_NAME := lineage_sycamore_row_5G
 PRODUCT_DEVICE := sycamore_row_5G
 PRODUCT_MANUFACTURER := Motorola
