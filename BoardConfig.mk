@@ -15,6 +15,14 @@ TARGET_KERNEL_SOURCE := kernel/google/gki-5.15
 TARGET_KERNEL_CONFIG := gki_defconfig
 TARGET_KERNEL_CONFIG_EXT := $(DEVICE_PATH)/kernel/gki.config
 TARGET_KERNEL_CLANG_VERSION := r450784e
+TARGET_KERNEL_CLANG_PATH := $(abspath prebuilts/clang/kernel/android13-5.15/clang-r450784e)
+
+# Google's pahole and source/output path maps (KERNEL_OUT is set when kernel.mk expands this)
+SYC_KERNEL_SRC := $(abspath $(TARGET_KERNEL_SOURCE))
+TARGET_KERNEL_ADDITIONAL_FLAGS = \
+    PAHOLE=$(abspath prebuilts/kernel-build-tools-android13/linux-x86/bin/pahole) \
+    KCPPFLAGS="-ffile-prefix-map=$(SYC_KERNEL_SRC)/= -ffile-prefix-map=$(SYC_KERNEL_SRC)=common \
+        -ffile-prefix-map=$(KERNEL_BUILD_OUT_PREFIX)$(KERNEL_OUT)=out/android13-5.15/common"
 
 # Stock vendor_boot v4 header values (9bdeac_017)
 BOARD_KERNEL_BASE := 0x40000000
