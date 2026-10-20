@@ -32,6 +32,11 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x26f00000
 BOARD_MKBOOTIMG_ARGS += --tags_offset 0x07c80000
 BOARD_MKBOOTIMG_ARGS += --dtb_offset 0x07c80000
 
+# Stock boot.img: empty header os fields, stock AVB os_version/security_patch (KeyMint patch level)
+BOARD_MKBOOTIMG_ARGS += --os_version 0 --os_patch_level none
+BOOT_OS_VERSION := 13
+BOOT_SECURITY_PATCH := 2024-05-05
+
 # DTB / DTBO (stock)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
