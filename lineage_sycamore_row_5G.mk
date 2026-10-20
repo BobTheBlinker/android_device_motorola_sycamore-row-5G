@@ -1,5 +1,6 @@
 # Inherit from the 64-bit product configuration (with 32-bit support for the stock vendor).
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_REQUIRES_HIDL_CAS_HAL := false
 

@@ -38,6 +38,10 @@ BOARD_MKBOOTIMG_ARGS += --os_version 0 --os_patch_level none
 BOOT_OS_VERSION := 13
 BOOT_SECURITY_PATCH := 2024-05-05
 
+# Stock init_boot: same pin (init_boot carries the OS version / patch level)
+BOARD_MKBOOTIMG_INIT_ARGS += --os_version 0 --os_patch_level none
+INIT_BOOT_OS_VERSION := 13
+
 # DTB / DTBO (stock)
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb
