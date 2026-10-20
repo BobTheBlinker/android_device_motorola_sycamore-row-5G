@@ -7,11 +7,14 @@ include device/motorola/mt6835-common/BoardConfigCommon.mk
 TARGET_BOOTLOADER_BOARD_NAME := sycamore_row_5G
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_IMAGE_NAME := Image.lz4
 
-# Use the stock-known-good kernel for initial Lineage bring-up.
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_FORCE_PREBUILT_KERNEL := true
+# Google GKI android13-5.15 at the stock build (ab/14024729), trimmed to the stock KMI,
+# without the GKI zram/zsmalloc modules (the stock vendor modules are used).
+TARGET_KERNEL_SOURCE := kernel/google/gki-5.15
+TARGET_KERNEL_CONFIG := gki_defconfig
+TARGET_KERNEL_CONFIG_EXT := $(DEVICE_PATH)/kernel/gki.config
+TARGET_KERNEL_CLANG_VERSION := r450784e
 
 # Stock vendor_boot v4 header values (9bdeac_017)
 BOARD_KERNEL_BASE := 0x40000000
