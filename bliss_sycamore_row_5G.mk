@@ -22,15 +22,16 @@ $(call inherit-product, device/motorola/sycamore_row_5G/device.mk)
 # EXPERIMENTAL until keyboard and pen support is tested
 LINEAGE_BUILDTYPE ?= EXPERIMENTAL
 
-# Inherit Lineage configuration.
-$(call inherit-product, vendor/lineage/config/common_full_tablet.mk)
+# Inherit BlissRON configuration.
+$(call inherit-product, vendor/bliss/config/common_full_tablet.mk)
 
-# MindTheGapps, opt-in
-ifeq ($(WITH_GMS),true)
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-endif
+# Maintainer Overlay
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_NAME := lineage_sycamore_row_5G
+# MindTheGapps architecture 
+GAPPS_ARCH := arm64
+
+PRODUCT_NAME := bliss_sycamore_row_5G
 PRODUCT_DEVICE := sycamore_row_5G
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BRAND := Motorola
