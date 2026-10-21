@@ -1,4 +1,4 @@
-vendor.lenovo.hardware.frp.IFrp/default    u:object_r:hal_frp_service:s0
+vendor.lenovo.hardware.frp.IFrp/default    u:object_r:vendor_hal_frp_service:s0
 vendor.lenovo.hardware.battery.IBattery/default              u:object_r:hal_lenovobattery_service:s0
 vendor.lenovo.hardware.display.IDisplay/default              u:object_r:hal_lenovodisplay_service:s0
 vendor.lenovo.hardware.display.IDisplayeffect/default        u:object_r:hal_lenovodisplay_service:s0

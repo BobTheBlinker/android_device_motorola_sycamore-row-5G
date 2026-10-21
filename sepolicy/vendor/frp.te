@@ -1,8 +1,8 @@
 # vendor.lenovo.hardware.frp-service (domain name as on stock)
 hal_attribute(frp)
 
-type hal_frp_service, hal_service_type, service_manager_type;
-hal_attribute_service(hal_frp, hal_frp_service)
+type vendor_hal_frp_service, hal_service_type, service_manager_type;
+hal_attribute_service(hal_frp, vendor_hal_frp_service)
 binder_use(hal_frp_server)
 
 type frp, domain, mlstrustedsubject;
