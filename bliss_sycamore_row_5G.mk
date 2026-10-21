@@ -20,9 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 $(call inherit-product, device/motorola/sycamore_row_5G/device.mk)
 
 # EXPERIMENTAL until keyboard and pen support is tested
-LINEAGE_BUILDTYPE ?= EXPERIMENTAL
+BLISS_BUILDTYPE ?= EXPERIMENTAL
 
-# Inherit BlissRON configuration.
+# Inherit BlissROM configuration.
 $(call inherit-product, vendor/bliss/config/common_full_tablet.mk)
 
 # Maintainer Overlay
