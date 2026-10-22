@@ -54,6 +54,7 @@ PRODUCT_PACKAGES += \
     SycamoreCellBroadcastRes \
     SycamoreFrameworksRes \
     SycamoreFrameworksResExt \
+    SycamoreSettingsProviderRes \
     SycamoreWifiRes
 
 # Recovery: USB controller for adb (ro.hardware is mt8755)
