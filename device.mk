@@ -49,10 +49,6 @@ PRODUCT_SYSTEM_PROPERTIES += \
     bluetooth.profile.pbap.server.enabled=true \
     bluetooth.profile.sap.server.enabled=true
 
-# Landscape boot animation (ro.bootanim.* is a system property; vendor_init cannot set it)
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.bootanim.set_orientation_logical_0=ORIENTATION_90
-
 # Overlays
 PRODUCT_PACKAGES += \
     SycamoreCellBroadcastRes \
