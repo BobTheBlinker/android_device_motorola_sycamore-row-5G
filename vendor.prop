@@ -272,7 +272,6 @@ ro.vendor.wlan.standalone.log=y
 ro.vendor.bt.platform=connac1x
 ro.vendor.bt.connac3=no
 ro.vendor.mtk_wapi_support=1
-bluetooth.profile.sap.server.enabled=false
 vendor.bluetooth.ldac.abr=true
 ro.vendor.mtk_sim_card_onoff=3
 persist.vendor.mims_support=2

@@ -47,7 +47,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     bluetooth.profile.pan.nap.enabled=true \
     bluetooth.profile.pan.panu.enabled=true \
     bluetooth.profile.pbap.server.enabled=true \
-    bluetooth.profile.sap.server.enabled=true
+    bluetooth.profile.sap.server.enabled=false
 
 # Overlays
 PRODUCT_PACKAGES += \
