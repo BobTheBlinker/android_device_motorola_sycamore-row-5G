@@ -103,13 +103,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6835.rc",
-    src: "init.mt6835.rc",
-    relative_install_path: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.mt6835.usb-v33.rc",
     src: "init.mt6835.usb-v33.rc",
     relative_install_path: "init/hw",

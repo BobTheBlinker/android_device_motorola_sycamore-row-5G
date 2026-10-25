@@ -37,7 +37,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init_connectivity.rc \
     init.modem.rc \
-    init.mt6835.rc \
     init.mt6835.usb-v33.rc \
     init.mt8755.rc \
     init.mtkgki.rc \

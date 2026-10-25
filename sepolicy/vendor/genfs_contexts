@@ -40,5 +40,5 @@ genfscon sysfs /devices/platform/trusty/wakeup/wakeup                           
 # Thermal efuse at this SoC's address (stock only labels efuse@11e80000)
 genfscon sysfs /devices/platform/soc/11c10000.efuse/mtk-devinfo0/nvmem    u:object_r:sysfs_thermal_efuse:s0
 
-# RGB LEDs that init.mt6835.rc chowns (not labeled on stock)
+# RGB LEDs that init.mt8755.rc chowns (not labeled on stock)
 genfscon sysfs /devices/platform/soc/soc:leds/leds    u:object_r:sysfs_leds:s0
