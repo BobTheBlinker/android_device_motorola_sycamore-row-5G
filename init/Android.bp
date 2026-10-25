@@ -1,0 +1,145 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// fstabs -> /vendor/etc. The first-stage copies (first_stage_ramdisk/) stay in
+// device.mk as PRODUCT_COPY_FILES to preserve the exact stock first-stage paths.
+
+prebuilt_etc {
+    name: "fstab.emmc",
+    src: "fstab.emmc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.enableswap",
+    src: "fstab.enableswap",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.mt6835",
+    src: "fstab.mt6835",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.mt6835dm",
+    src: "fstab.mt6835dm",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.mt8755",
+    src: "fstab.mt8755",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.mt8755dm",
+    src: "fstab.mt8755dm",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram_wb",
+    src: "fstab.zram_wb",
+    vendor: true,
+}
+
+// ueventd -> /vendor/etc/ueventd.rc (module name differs from the file to avoid
+// colliding with the AOSP "ueventd.rc" module; installed name is ueventd.rc).
+
+prebuilt_etc {
+    name: "ueventd.mt8755.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.mt8755.rc",
+    vendor: true,
+}
+
+// init rc -> /vendor/etc/init/hw
+
+prebuilt_etc {
+    name: "init.aee.rc",
+    src: "init.aee.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.cgroup.rc",
+    src: "init.cgroup.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.common.rc",
+    src: "init.connectivity.common.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "init.connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init_connectivity.rc",
+    src: "init_connectivity.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.modem.rc",
+    src: "init.modem.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6835.rc",
+    src: "init.mt6835.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt6835.usb-v33.rc",
+    src: "init.mt6835.usb-v33.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt8755.rc",
+    src: "init.mt8755.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mtkgki.rc",
+    src: "init.mtkgki.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "init.project.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.sensor_2_0.rc",
+    src: "init.sensor_2_0.rc",
+    relative_install_path: "init/hw",
+    vendor: true,
+}

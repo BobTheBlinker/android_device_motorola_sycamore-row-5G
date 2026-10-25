@@ -96,7 +96,7 @@ BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(SYC_DLKM_MODULES)/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(SYC_DLKM_MODULES)/modules.load))
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt8755
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt8755
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 
 # Landscape recovery to match the landscape-native display (portrait panel rotated 90 CW)
