@@ -102,7 +102,6 @@ debug.sf.disable_backpressure=1
 ro.vendor.mtk_log_hide_gps=1
 ro.cp_system_other_odex=1
 ro.control_privapp_permissions=enforce
-ro.telephony.iwlan_operation_mode=AP-assisted
 debug.mtk_tflite.target_nnapi=29
 ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
 ro.vendor.mtk_nn_quant_preferred=1
@@ -181,7 +180,6 @@ ro.frp.pst=/dev/block/by-name/frp
 ro.opengles.version=196610
 ro.hardware.vulkan=mali
 graphics.gpu.profiler.support=true
-ro.gfx.driver.0=com.mediatek.mt6835.gamedriver
 ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.hal_format=0x1
 ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.recordable=true
 ro.vendor.arm.egl.configs.r8_g8_b8_a8_32bit_fixed.framebuffer_target=false
@@ -293,7 +291,6 @@ ro.vendor.pref_scale_enable_cfg=1
 ro.vendor.mtk_widevine_drm_l1_support=1
 ro.vendor.mtk_protocol1_rat_config=N/Lf/Lt/W/G
 ro.vendor.mtk_c2k_lte_mode=0
-ro.telephony.default_network=32,32,32,32
 ro.vendor.mtk_ps1_rat=N/Lf/Lt/W/G
 ro.vendor.mtk_lte_support=1
 persist.vendor.radio.mtk_ps2_rat=N/L/W/G
@@ -312,7 +309,6 @@ ro.vendor.mtk_fast_charging_support=1
 ro.vendor.mtk.sensor.support=yes
 ro.vendor.camera.insensorzoom.support=0
 ro.vendor.camera.isp.support.colorspace=0
-ro.camera.disableJpegR=true
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_wfd_support=1
 ro.vendor.mtk_thermal_2_0=1
@@ -326,13 +322,6 @@ ro.vendor.mgk_name=mgk_64_entry_level_k515
 
 # VNDK (stock vendor is API 33; libs come from com.android.vndk.v33)
 ro.vndk.version=33
-
-# Dalvik heap (stock values; ART falls back to a 16 MB heap without them)
-dalvik.vm.heapgrowthlimit=256m
-dalvik.vm.heapmaxfree=8m
-dalvik.vm.heapminfree=512k
-dalvik.vm.heapsize=512m
-dalvik.vm.heaptargetutilization=0.75
 
 # Landscape boot animation, keyed by physical display ID
 ro.bootanim.set_orientation_4627039422300187648=ORIENTATION_90

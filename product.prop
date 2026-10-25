@@ -1,0 +1,10 @@
+# Dalvik heap (stock Moto values; no stock *-dalvik-heap.mk matches)
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.75
+ro.gfx.driver.0=com.mediatek.mt6835.gamedriver
+ro.telephony.default_network=32,32,32,32
+ro.telephony.iwlan_operation_mode=AP-assisted
+ro.camera.disableJpegR=true

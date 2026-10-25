@@ -109,6 +109,7 @@ TARGET_SCREEN_DENSITY := 320
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
