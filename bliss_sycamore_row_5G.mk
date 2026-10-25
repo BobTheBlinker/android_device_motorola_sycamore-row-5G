@@ -9,8 +9,8 @@ TARGET_REQUIRES_HIDL_CAS_HAL := false
 PRODUCT_VENDOR_PROPERTIES += \
     keyguard.no_require_sim?=true \
     ro.com.android.dataroaming?=true
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+# handheld_core_hardware: the stock vendor blob ships handheld_core_hardware-v33.prebuilt.xml,
+# so no AOSP copy is installed here (avoids a double-install + over-declaring sensor.compass).
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
