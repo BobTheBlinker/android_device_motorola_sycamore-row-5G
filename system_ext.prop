@@ -1,0 +1,5 @@
+ro.oem_unlock_supported=1
+ro.incremental.enable=yes
+ro.logd.kernel=false
+apexd.config.dm_create.timeout=5000
+apexd.config.loop_wait.attempts=100
