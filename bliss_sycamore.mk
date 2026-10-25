@@ -36,7 +36,7 @@ PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # MindTheGapps architecture 
 GAPPS_ARCH := arm64
 
-PRODUCT_NAME := bliss_sycamore_row_5G
+PRODUCT_NAME := bliss_sycamore
 PRODUCT_DEVICE := sycamore_row_5G
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BRAND := Motorola
