@@ -16,14 +16,11 @@ PRODUCT_CHARACTERISTICS := tablet
 
 # First-stage fstabs (stock): explicit copies keep the exact first_stage_ramdisk paths
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.emmc:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.emmc \
-    $(LOCAL_PATH)/init/fstab.mt6835:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6835 \
     $(LOCAL_PATH)/init/fstab.mt8755:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt8755 \
     $(LOCAL_PATH)/init/fstab.mt8755dm:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt8755dm
 
 # fstabs, ueventd and init rc -> /vendor/etc via init/Android.bp (prebuilt_etc)
 PRODUCT_PACKAGES += \
-    fstab.emmc \
     fstab.enableswap \
     fstab.mt6835 \
     fstab.mt6835dm \
