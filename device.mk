@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # Inherit from MT6835 common.
 $(call inherit-product, device/motorola/mt6835-common/common.mk)
 

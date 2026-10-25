@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # Inherit from the 64-bit product configuration (with 32-bit support for the stock vendor).
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)

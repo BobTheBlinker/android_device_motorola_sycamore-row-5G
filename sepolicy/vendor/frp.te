@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 # vendor.lenovo.hardware.frp-service (domain name as on stock)
 hal_attribute(frp)
 

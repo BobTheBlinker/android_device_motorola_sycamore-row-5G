@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 type nvram_lenovo, domain;
 type nvram_lenovo_exec, exec_type, vendor_file_type, file_type;
 

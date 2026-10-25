@@ -1,2 +1,7 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 type lenovo_keyboard_device, dev_type;
 type lenovocust_block_device, dev_type;

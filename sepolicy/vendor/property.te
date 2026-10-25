@@ -1,2 +1,7 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 vendor_internal_prop(vendor_hal_battery_prop)
 vendor_internal_prop(vendor_lenovotb_init_prop)

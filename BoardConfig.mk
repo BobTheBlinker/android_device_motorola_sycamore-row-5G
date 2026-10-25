@@ -1,3 +1,8 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 DEVICE_PATH := device/motorola/sycamore_row_5G
 
 # Inherit from Motorola MT6835 common.

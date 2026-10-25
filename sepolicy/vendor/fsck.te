@@ -1,1 +1,6 @@
+#
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+#
+
 allow fsck lenovocust_block_device:blk_file rw_file_perms;
