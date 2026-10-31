@@ -130,3 +130,17 @@ prebuilt_etc {
     relative_install_path: "init/hw",
     vendor: true,
 }
+
+// Keyboard folio and pen key layouts -> /vendor/usr/keylayout
+
+prebuilt_usr_keylayout {
+    name: "Vendor_17ef_Product_61ba.kl",
+    src: "keylayout/Vendor_17ef_Product_61ba.kl",
+    vendor: true,
+}
+
+prebuilt_usr_keylayout {
+    name: "Vendor_17ef_Product_617f.kl",
+    src: "keylayout/Vendor_17ef_Product_617f.kl",
+    vendor: true,
+}

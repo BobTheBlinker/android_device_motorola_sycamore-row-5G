@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2026 BOBtheBlinker
+# SPDX-License-Identifier: Apache-2.0
+
+#
+# Key layout for the Lenovo Tab Pen Plus Consumer Control (Bluetooth,
+# VID 0x17ef PID 0x617f) - the stylus for the Moto Pad 2026.
+#
+# Maps the pen's barrel/tail button HID consumer-page (0x0c) usages, which the
+# stock ZUI layout bound to Lenovo-only PEN_* keycodes, onto the standard
+# Android stylus-button keycodes. Unmapped stock usages: 0x0c0602 (PEN_THREE_CLICK),
+# 0x0c0604 (PEN_PRESS_CLICK), 0x0c0605 (PEN_BT_DISCONNECT).
+#
+
+key usage 0x0c0600 STYLUS_BUTTON_PRIMARY     # stock PEN_ONE_CLICK
+key usage 0x0c0601 STYLUS_BUTTON_SECONDARY   # stock PEN_TWO_CLICK
+key usage 0x0c0603 STYLUS_BUTTON_TAIL        # stock PEN_LONG_CLICK

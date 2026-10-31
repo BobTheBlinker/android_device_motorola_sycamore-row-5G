@@ -45,6 +45,11 @@ PRODUCT_PACKAGES += \
     init.project.rc \
     init.sensor_2_0.rc
 
+# Keyboard folio and pen key layouts -> /vendor/usr/keylayout via init/Android.bp
+PRODUCT_PACKAGES += \
+    Vendor_17ef_Product_61ba.kl \
+    Vendor_17ef_Product_617f.kl
+
 # Bluetooth profiles (stock system build.prop)
 PRODUCT_SYSTEM_PROPERTIES += \
     bluetooth.profile.a2dp.source.enabled=true \
