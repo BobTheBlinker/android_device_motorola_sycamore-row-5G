@@ -21,8 +21,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 
-# Inherit from sycamore_row_5G device.
-$(call inherit-product, device/motorola/sycamore_row_5G/device.mk)
+# Inherit from the device tree.
+$(call inherit-product, device/motorola/sycamore/device.mk)
 
 # EXPERIMENTAL until keyboard and pen support is tested
 BLISS_BUILDTYPE ?= EXPERIMENTAL
@@ -37,7 +37,7 @@ PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 GAPPS_ARCH := arm64
 
 PRODUCT_NAME := bliss_sycamore
-PRODUCT_DEVICE := sycamore_row_5G
+PRODUCT_DEVICE := sycamore
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_BRAND := Motorola
 PRODUCT_MODEL := Moto Pad 2026

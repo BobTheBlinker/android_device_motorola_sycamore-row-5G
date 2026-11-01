@@ -3,13 +3,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/motorola/sycamore_row_5G
+DEVICE_PATH := device/motorola/sycamore
 
 # Inherit from Motorola MT6835 common.
 include device/motorola/mt6835-common/BoardConfigCommon.mk
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sycamore_row_5G
+
+# OTA assert: accept the family codename and both variant/model names
+TARGET_OTA_ASSERT_DEVICE := sycamore,sycamore_row_5G,sycamore_row_wifi,XT2575-4,TB336FU
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image.lz4
