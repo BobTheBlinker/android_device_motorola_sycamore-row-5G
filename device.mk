@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     Vendor_17ef_Product_61ba.kl \
     Vendor_17ef_Product_617f.kl
 
+# Pen & keyboard device settings app (-> /system_ext/priv-app)
+PRODUCT_PACKAGES += \
+    SycamorePeripheralManager
+
 # Bluetooth profiles (stock system build.prop)
 PRODUCT_SYSTEM_PROPERTIES += \
     bluetooth.profile.a2dp.source.enabled=true \

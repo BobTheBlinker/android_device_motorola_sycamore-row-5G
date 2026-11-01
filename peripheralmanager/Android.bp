@@ -1,0 +1,25 @@
+//
+// SPDX-FileCopyrightText: 2023 The LineageOS Project
+// SPDX-FileCopyrightText: 2026 BOBtheBlinker
+// SPDX-License-Identifier: Apache-2.0
+//
+// Derived from LineageOS/android_device_xiaomi_pipa peripheralmanager/.
+//
+
+android_app {
+    name: "SycamorePeripheralManager",
+    defaults: [
+        "SettingsLibDefaults",
+    ],
+
+    certificate: "platform",
+    srcs: ["src/**/*.java"],
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+    resource_dirs: ["res"],
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+    ],
+}

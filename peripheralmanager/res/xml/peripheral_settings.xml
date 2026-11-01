@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2023 The LineageOS Project
+     SPDX-FileCopyrightText: 2026 BOBtheBlinker
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/peripheral_title">
+
+    <PreferenceCategory
+        android:key="status_category"
+        android:title="@string/status_category_title">
+
+        <Preference
+            android:key="pen_status"
+            android:title="@string/pen_title"
+            android:selectable="false"/>
+
+        <Preference
+            android:key="keyboard_status"
+            android:title="@string/keyboard_title"
+            android:selectable="false"/>
+
+    </PreferenceCategory>
+
+    <com.android.settingslib.widget.FooterPreference
+        android:key="footer"
+        android:title="@string/peripheral_footer"
+        android:selectable="false"/>
+
+</PreferenceScreen>
