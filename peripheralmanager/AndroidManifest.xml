@@ -44,12 +44,16 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.homepage"/>
+            <meta-data android:name="com.android.settings.keyhint"
+                       android:value="top_level_pen_keyboard"/>
+            <meta-data android:name="com.android.settings.group_key"
+                       android:value="top_level_connectivity_category"/>
             <meta-data android:name="com.android.settings.icon"
                        android:resource="@drawable/ic_pen_keyboard"/>
-            <meta-data android:name="com.android.settings.icon_tintable"
-                       android:value="true"/>
+            <meta-data android:name="com.android.settings.icon_color_scheme"
+                       android:value="blue_variant"/>
             <meta-data android:name="com.android.settings.order"
-                       android:value="-125"/>
+                       android:value="-5"/>
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/peripheral_summary"/>
         </activity>
