@@ -1,12 +1,5 @@
 # Stock vendor runtime configuration.
 ro.minui.pixel_format=BGRA_8888
-ro.vendor.config.lgsi.ota.model=XT2575-4_ROW
-ro.vendor.config.lgsi.project=sycamore
-ro.vendor.config.lgsi.device.type=pad
-ro.vendor.config.lgsi.device.nettype=lte
-ro.vendor.config.lgsi.platform=mtk
-ro.vendor.config.lgsi.cmitid=CMIT_ID-LSSIV-2024
-ro.vendor.config.lgsi.aod.support=0
 ro.virtual_ab.enabled=true
 ro.virtual_ab.compression.enabled=true
 ro.virtual_ab.userspace.snapshots.enabled=true
@@ -112,7 +105,6 @@ persist.vendor.radio.jp_mode_timer1_delay_timer=15
 persist.vendor.radio.jp_mode_timer2_delay_timer=31
 ro.vendor.mgvi_name=mgvi_t_64_armv82
 ro.vendor.dolby.dax.version=DAX3_3.13.0.9_r1
-ro.vendor.config.lgsi.market_name=moto pad - 2026
 ro.board.first_api_level=33
 ro.vendor.rc=/vendor/etc/init/hw/
 ro.surface_flinger.protected_contents=true
